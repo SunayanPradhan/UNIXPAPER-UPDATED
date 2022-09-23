@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.CategoriesActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/category_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="CATEGORIES"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="25sp"
+                android:fontFamily="@font/google_sans_bold">
+
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+        </RelativeLayout>
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            android:id="@+id/category_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarFragment"
+            app:shimmer_demo_layout="@layout/sample_design_layout"
+            app:shimmer_demo_grid_child_count="2"
+            app:shimmer_demo_layout_manager_type="grid">
+
+
+        </com.cooltechworks.views.shimmer.ShimmerRecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
